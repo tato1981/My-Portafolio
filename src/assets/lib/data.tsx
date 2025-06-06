@@ -22,7 +22,7 @@ import rendericon from "../../assets/icons/rendericon.svg";
 import jwticon from "../../assets/icons/jwticon.svg";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
-import webflowicon from "../../assets/icons/webflowicon.svg";
+import astro from "../../assets/icons/astro.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
@@ -290,9 +290,9 @@ export const skillsDataCMS = [
         color: "#7AB55C",
       },
       {
-        title: "Webflow",
-        hash: "#Webflow",
-        icon: webflowicon,
+        title: "Astro",
+        hash: "#Astro",
+        icon: astro,
         color: "#4353FF",
       },
     ],
