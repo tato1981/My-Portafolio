@@ -1,0 +1,86 @@
+
+<body>
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="grid-pattern"></div>
+        
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="particles" id="particles-container"></div>
+        
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="/src/assets/profile.jpg" alt="Duberney Obando Cano">
+            </div>
+            
+            <h1 class="hero-title">Duberney Obando Cano</h1>
+            
+            <p class="hero-subtitle">Ingeniero de Sistemas | Desarrollador de Software | Especialista en Ciberseguridad</p>
+            
+            <div class="specialties">
+                <div class="specialty"><i class="fas fa-code"></i> Desarrollo Web</div>
+                <div class="specialty"><i class="fas fa-shield-alt"></i> Auditorías de Ciberseguridad</div>
+                <div class="specialty"><i class="fas fa-user-secret"></i> Red Team</div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button primary">
+                    <i class="fas fa-envelope"></i> Contáctame
+                </a>
+                <a href="#projects" class="cta-button secondary">
+                    <i class="fas fa-briefcase"></i> Ver Proyectos
+                </a>
+            </div>
+            
+            <div class="cyber-badge">
+                <i class="fas fa-shield-alt"></i> Especialista en Seguridad Ofensiva
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            Desplázate para descubrir más
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <script>
+        // Generador de partículas
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles-container');
+            const particleCount = 40;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posición y propiedades aleatorias
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 15 + Math.random() * 10;
+                const size = 2 + Math.random() * 3;
+                
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Color aleatorio entre azules y morados
+                const colors = [
+                    'rgba(59, 130, 246, 0.7)',
+                    'rgba(139, 92, 246, 0.7)',
+                    'rgba(6, 182, 212, 0.7)'
+                ];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.backgroundColor = randomColor;
+                
+                particlesContainer.appendChild(particle);
+            }
+        });
+    </script>
+</body>
+</html>

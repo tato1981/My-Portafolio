@@ -1,0 +1,229 @@
+
+    
+</head>
+<body class="bg-gray-900 text-white min-h-screen overflow-x-hidden">
+    <!-- Sección Proyectos -->
+    <section id="projects" class="py-20 relative overflow-hidden min-h-screen flex items-center">
+        <!-- Fondo idéntico al diseño anterior -->
+        <div class="hero-background absolute inset-0 z-0"></div>
+        <div class="grid-pattern z-0"></div>
+        
+        <!-- Formas flotantes idénticas al diseño anterior -->
+        <div class="floating-shapes absolute inset-0 z-0">
+            <div class="floating-shape w-72 h-72 md:w-96 md:h-96 top-10 left-5 bg-blue-500/30 animation-delay-0"></div>
+            <div class="floating-shape w-48 h-48 md:w-64 md:h-64 top-60 right-5 bg-purple-500/30 animation-delay-5000 animation-duration-20s"></div>
+            <div class="floating-shape w-60 h-60 md:w-80 md:h-80 bottom-10 left-15 bg-cyan-500/30 animation-delay-10000 animation-duration-25s"></div>
+        </div>
+        
+        <!-- Partículas -->
+        <div class="particles absolute inset-0 z-0" id="particles-container"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent bg-size-200 animate-textShine">
+                Mis Proyectos
+            </h2>
+            
+            <p class="text-xl text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+                Una muestra de mis trabajos más destacados, combinando creatividad, funcionalidad y seguridad
+            </p>
+            
+            <!-- Cuadrícula de Proyectos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1: Sistema de Seguridad -->
+                <div class="project-card cyber-border rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sistema de Seguridad">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Sistema de Monitoreo de Seguridad</h3>
+                        <p class="text-gray-400 mb-4">
+                            Plataforma integral para monitoreo de seguridad en tiempo real con detección de amenazas y panel de administración.
+                        </p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-cyan-400"><i class="fas fa-calendar mr-1"></i> 2023</span>
+                            <a href="#" class="text-cyan-400 hover:text-blue-500 font-bold transition-colors duration-300 flex items-center">
+                                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Herramienta Pentesting -->
+                <div class="project-card cyber-border rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Herramienta Pentesting">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Herramienta de Pentesting Automatizado</h3>
+                        <p class="text-gray-400 mb-4">
+                            Aplicación para pruebas de penetración automatizadas con reportes detallados y análisis de vulnerabilidades.
+                        </p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Nmap</span>
+                            <span class="tech-tag">Metasploit</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-cyan-400"><i class="fas fa-calendar mr-1"></i> 2022</span>
+                            <a href="#" class="text-cyan-400 hover:text-blue-500 font-bold transition-colors duration-300 flex items-center">
+                                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: API Segura -->
+                <div class="project-card cyber-border rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="API Segura">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">API REST Segura con Autenticación Avanzada</h3>
+                        <p class="text-gray-400 mb-4">
+                            API robusta con múltiples capas de seguridad, rate limiting, autenticación de dos factores y documentación completa.
+                        </p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">OAuth2</span>
+                            <span class="tech-tag">Swagger</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-cyan-400"><i class="fas fa-calendar mr-1"></i> 2021</span>
+                            <a href="#" class="text-cyan-400 hover:text-blue-500 font-bold transition-colors duration-300 flex items-center">
+                                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de proyectos adicionales -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Más Proyectos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <i class="fas fa-lock text-3xl text-cyan-400 mb-2"></i>
+                        <h4 class="font-bold">Encriptador AES</h4>
+                        <p class="text-sm text-gray-400 mt-2">Herramienta de encriptación avanzada</p>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <i class="fas fa-network-wired text-3xl text-cyan-400 mb-2"></i>
+                        <h4 class="font-bold">Scanner de Red</h4>
+                        <p class="text-sm text-gray-400 mt-2">Utilidad para análisis de redes</p>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <i class="fas fa-bug text-3xl text-cyan-400 mb-2"></i>
+                        <h4 class="font-bold">Bug Tracker</h4>
+                        <p class="text-sm text-gray-400 mt-2">Sistema de seguimiento de errores</p>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <i class="fas fa-chart-bar text-3xl text-cyan-400 mb-2"></i>
+                        <h4 class="font-bold">SEO Analyzer</h4>
+                        <p class="text-sm text-gray-400 mt-2">Herramienta de análisis SEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Generador de partículas (idéntico al diseño anterior)
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles-container');
+            const particleCount = 40;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posición y propiedades aleatorias
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 15 + Math.random() * 10;
+                const size = 2 + Math.random() * 3;
+                
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Color aleatorio entre azules y morados
+                const colors = [
+                    'rgba(59, 130, 246, 0.7)',
+                    'rgba(139, 92, 246, 0.7)',
+                    'rgba(6, 182, 212, 0.7)'
+                ];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.backgroundColor = randomColor;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Animación de las tarjetas de proyectos al hacer scroll
+            const projectCards = document.querySelectorAll('.project-card');
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            projectCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

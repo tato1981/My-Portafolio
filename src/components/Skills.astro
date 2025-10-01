@@ -1,0 +1,253 @@
+
+   <script>
+    // Esperar a que Tailwind esté disponible
+    function initializeTailwindConfig() {
+        const tailwindConfig = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fadeInUp': 'fadeInUp 0.8s ease-out',
+                        // ... tus animaciones
+                    },
+                    keyframes: {
+                        // ... tus keyframes
+                    },
+                    backgroundImage: {
+                        'cyber-grid': "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
+                    }
+                }
+            }
+        };
+
+       
+    }
+
+    // Inicializar cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', initializeTailwindConfig);
+</script>
+    
+</head>
+<body class="bg-gray-900 text-white min-h-screen overflow-x-hidden">
+    <!-- Sección Habilidades -->
+    <section id="skills" class="py-20 relative overflow-hidden min-h-screen flex items-center">
+        <!-- Fondo idéntico al diseño anterior -->
+        <div class="hero-background absolute inset-0 z-0"></div>
+        <div class="grid-pattern z-0"></div>
+        
+        <!-- Formas flotantes idénticas al diseño anterior -->
+        <div class="floating-shapes absolute inset-0 z-0">
+            <div class="floating-shape w-72 h-72 md:w-96 md:h-96 top-10 left-5 bg-blue-500/30 animation-delay-0"></div>
+            <div class="floating-shape w-48 h-48 md:w-64 md:h-64 top-60 right-5 bg-purple-500/30 animation-delay-5000 animation-duration-20s"></div>
+            <div class="floating-shape w-60 h-60 md:w-80 md:h-80 bottom-10 left-15 bg-cyan-500/30 animation-delay-10000 animation-duration-25s"></div>
+        </div>
+        
+        <!-- Partículas -->
+        <div class="particles absolute inset-0 z-0" id="particles-container"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent bg-size-200 animate-textShine">
+                Mis Habilidades
+            </h2>
+            
+            <p class="text-xl text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+                Combinando creatividad, precisión técnica y seguridad para ofrecer soluciones de alta calidad
+            </p>
+            
+            <!-- Cuadrícula de Habilidades -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Habilidad 1: Desarrollo Web -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-code text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Desarrollo Web</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 85%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creación de aplicaciones web modernas y responsivas con las últimas tecnologías.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Habilidad 2: Ciberseguridad -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-shield-alt text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Ciberseguridad</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 90%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Protección de sistemas y redes mediante auditorías de seguridad exhaustivas.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Burp Suite</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">OWASP</span>
+                        <span class="tech-tag">Auditorías</span>
+                    </div>
+                </div>
+
+                <!-- Habilidad 3: Hacking Ético -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-user-secret text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Hacking Ético</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 80%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Identificación de vulnerabilidades mediante pruebas de penetración controladas.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">Pen Testing</span>
+                        <span class="tech-tag">Red Team</span>
+                        <span class="tech-tag">Vulnerability Assessment</span>
+                        <span class="tech-tag">Social Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Habilidad 4: Desarrollo Backend -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-server text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Desarrollo Backend</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 75%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Construcción de APIs robustas y escalables con arquitecturas modernas.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">GraphQL</span>
+                    </div>
+                </div>
+
+                <!-- Habilidad 5: DevOps -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-cloud text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">DevOps & Cloud</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 70%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Automatización de despliegues y gestión de infraestructura en la nube.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <!-- Habilidad 6: Análisis de Seguridad -->
+                <div class="skill-card cyber-border p-6 rounded-xl bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="skill-icon mr-4 p-3 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
+                            <i class="fas fa-search text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Análisis Forense</h3>
+                    </div>
+                    <div class="skill-bar mb-4">
+                        <div class="skill-progress" style="--target-width: 65%"></div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Investigación de incidentes de seguridad y análisis de evidencias digitales.</p>
+                    <div class="flex flex-wrap">
+                        <span class="tech-tag">Forense Digital</span>
+                        <span class="tech-tag">Análisis de Malware</span>
+                        <span class="tech-tag">Log Analysis</span>
+                        <span class="tech-tag">Incident Response</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de habilidades adicionales -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Otras Competencias</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <span class="text-gray-300">Gestión de Proyectos</span>
+                    </div>
+                    <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <span class="text-gray-300">Scrum/Agile</span>
+                    </div>
+                    <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <span class="text-gray-300">Autodidacta</span>
+                    </div>
+                    <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <span class="text-gray-300">Resolución de Problemas</span>
+                    </div>
+                    <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                        <span class="text-gray-300">Trabajo en Equipo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (): void => {
+        // Partículas
+        const particlesContainer = document.getElementById('particles-container');
+        if (particlesContainer) {
+            Array.from({ length: 40 }).forEach(() => {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const colors = ['rgba(59, 130, 246, 0.7)', 'rgba(139, 92, 246, 0.7)', 'rgba(6, 182, 212, 0.7)'];
+                
+                Object.assign(particle.style, {
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 15}s`,
+                    animationDuration: `${15 + Math.random() * 10}s`,
+                    width: `${2 + Math.random() * 3}px`,
+                    height: `${2 + Math.random() * 3}px`,
+                    backgroundColor: colors[Math.floor(Math.random() * colors.length)]
+                });
+                
+                particlesContainer.appendChild(particle);
+            });
+        }
+
+        // Observador de habilidades
+        const skillCards = document.querySelectorAll('.skill-card');
+        const observer = new IntersectionObserver(
+            (entries: IntersectionObserverEntry[]) => {
+                entries.forEach(entry => {
+                    const target = entry.target as HTMLElement;
+                    if (entry.isIntersecting) {
+                        target.style.animationPlayState = 'running';
+                    }
+                });
+            },
+            { threshold: 0.5, rootMargin: '0px 0px -100px 0px' }
+        );
+
+        skillCards.forEach(card => observer.observe(card));
+    });
+</script>
+
+</body>
+</html>
