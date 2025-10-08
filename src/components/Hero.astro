@@ -14,12 +14,17 @@
         
         <div class="hero-content">
             <div class="profile-image">
-                <img src="/src/assets/profile.jpg" alt="Duberney Obando Cano">
+                <img src="/images/profile.jpg" alt="Duberney Obando Cano">
             </div>
             
             <h1 class="hero-title">Duberney Obando Cano</h1>
             
-            <p class="hero-subtitle">Ingeniero de Sistemas | Desarrollador de Software | Especialista en Ciberseguridad</p>
+            <!-- Modern typewriter subtitle -->
+            <p class="hero-subtitle text-lg text-gray-300 mt-2">
+                <span class="sr-only">Títulos: </span>
+                <span id="typewriter" class="font-medium text-indigo-200"></span>
+                <span id="typewriter-cursor" class="inline-block w-1 bg-indigo-400 ml-1 animate-blink" aria-hidden="true"></span>
+            </p>
             
             <div class="specialties">
                 <div class="specialty"><i class="fas fa-code"></i> Desarrollo Web</div>
@@ -52,23 +57,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             const particlesContainer = document.getElementById('particles-container');
             const particleCount = 40;
-            
+
+            if (!particlesContainer) return;
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
-                
+
                 // Posición y propiedades aleatorias
                 const left = Math.random() * 100;
                 const delay = Math.random() * 15;
                 const duration = 15 + Math.random() * 10;
                 const size = 2 + Math.random() * 3;
-                
+
                 particle.style.left = `${left}%`;
                 particle.style.animationDelay = `${delay}s`;
                 particle.style.animationDuration = `${duration}s`;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
-                
+
                 // Color aleatorio entre azules y morados
                 const colors = [
                     'rgba(59, 130, 246, 0.7)',
@@ -77,9 +84,71 @@
                 ];
                 const randomColor = colors[Math.floor(Math.random() * colors.length)];
                 particle.style.backgroundColor = randomColor;
-                
+
                 particlesContainer.appendChild(particle);
             }
+        });
+    </script>
+    <script>
+        // Modern typewriter that cycles through phrases with typing and deleting
+        document.addEventListener('DOMContentLoaded', function () {
+            const phrases = [
+                'Ingeniero de Sistemas',
+                'Desarrollador de Software',
+                'Especialista en Ciberseguridad'
+            ];
+
+            const typeEl = document.getElementById('typewriter');
+            const cursorEl = document.getElementById('typewriter-cursor');
+
+            if (!(typeEl instanceof HTMLElement)) return; // nothing to do if target missing
+            const type = typeEl;
+
+            // Tailwind-friendly cursor blink (fallback if animate-blink not present)
+            if (cursorEl) {
+                cursorEl.style.transition = 'opacity 0.1s linear';
+                setInterval(() => {
+                    cursorEl.style.opacity = cursorEl.style.opacity === '0' ? '1' : '0';
+                }, 600);
+            }
+
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let typing = true; // true => typing, false => deleting
+
+            const TYPING_SPEED = 80; // ms per char
+            const DELETING_SPEED = 40;
+            const HOLD_DELAY = 1500; // how long to hold the full phrase
+
+            function tick() {
+                const current = phrases[phraseIndex];
+
+                if (typing) {
+                    charIndex++;
+                    type.textContent = current.slice(0, charIndex);
+
+                    if (charIndex === current.length) {
+                        typing = false;
+                        setTimeout(tick, HOLD_DELAY);
+                        return;
+                    }
+                    setTimeout(tick, TYPING_SPEED + Math.random() * 80);
+                } else {
+                    charIndex--;
+                    type.textContent = current.slice(0, charIndex);
+
+                    if (charIndex === 0) {
+                        typing = true;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                        setTimeout(tick, 200);
+                        return;
+                    }
+                    setTimeout(tick, DELETING_SPEED + Math.random() * 40);
+                }
+            }
+
+            // start after small delay
+            setTimeout(tick, 600);
         });
     </script>
 </body>

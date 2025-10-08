@@ -1,7 +1,7 @@
 
 <body class="min-h-screen flex items-center justify-center p-4">
     <!-- Header Mejorado -->
-    <header class="bg-gradient-to-r from-indigo-700 to-purple-700 py-4 shadow-2xl sticky top-0 z-50 w-full">
+    <header style="background: var(--header-bg);" class="py-4 shadow-2xl sticky top-0 z-50 w-full transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <!-- Logo Mejorado -->
             <div class="flex items-center space-x-2">
@@ -30,6 +30,11 @@
                 <a href="#contact" class="nav-item py-2 px-1 hover:text-cyan-300 transition-all duration-300 relative">
                     <i class="fas fa-envelope mr-2"></i>Contacto
                 </a>
+                <!-- Botón de cambio de tema -->
+                <button id="theme-toggle" class="theme-toggle-btn py-2 px-1 hover:text-cyan-300 transition-all duration-300 relative" onclick="toggleTheme()">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
             </nav>
 
             
@@ -43,7 +48,7 @@
         </div>
 
         <!-- Menú Desplegable Mejorado para Móviles -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full mobile-menu shadow-xl z-40">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full mobile-menu shadow-xl z-40 bg-gradient-to-r from-indigo-700 to-purple-700 dark:bg-darkcard transition-colors duration-300">
             <ul class="py-4 text-gray-200">
                 <li class="border-b border-indigo-600">
                     <a href="#about" class="block py-4 px-6 hover:bg-indigo-600 transition-all duration-300 flex items-center">
@@ -71,8 +76,16 @@
                     </a>
                 </li>
                 <li class="mt-4 px-6">
-                    <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+                    <a href="#contact" class="w-full inline-flex bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 rounded-full shadow-lg transition-all duration-300 items-center justify-center">
                         <i class="fas fa-paper-plane mr-2"></i> Contáctame
+                    </a>
+                </li>
+                <li class="mt-4 px-6">
+                    <button id="theme-toggle-mobile" onclick="toggleTheme()" class="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-medium py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-moon mr-2 dark:hidden"></i>
+                        <i class="fas fa-sun mr-2 hidden dark:block"></i>
+                        <span class="dark:hidden">Modo Oscuro</span>
+                        <span class="hidden dark:block">Modo Claro</span>
                     </button>
                 </li>
             </ul>
@@ -90,7 +103,7 @@
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
                 menuToggle.classList.toggle('active');
-                
+
                 // Cerrar menú al hacer clic en un enlace (solo en móviles)
                 const menuLinks = mobileMenu.querySelectorAll('a');
                 menuLinks.forEach(link => {
@@ -100,25 +113,27 @@
                     });
                 });
             });
-            
+
             // Cerrar menú al hacer clic fuera de él
-        document.addEventListener('click', (e) => {
-        if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-          mobileMenu.classList.add('hidden');
-           menuToggle.classList.remove('active');
-    }
-});
+            document.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target && menuToggle && mobileMenu && target instanceof Node && !menuToggle.contains(target) && !mobileMenu.contains(target)) {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.classList.remove('active');
+                }
+            });
         }
-        
+
         // Efecto de cambio de opacidad en scroll (versión simplificada)
         window.addEventListener('scroll', () => {
-          const header = document.querySelector('header');
-          if (window.scrollY > 50) {
-              header.classList.add('backdrop-blur-sm', 'bg-indigo-900/90');
-          } else {
-              header.classList.remove('backdrop-blur-sm', 'bg-indigo-900/90');
-          }
-});
+            const header = document.querySelector('header');
+            if (!header) return;
+            if (window.scrollY > 50) {
+                header.classList.add('backdrop-blur-sm', 'bg-indigo-900/90');
+            } else {
+                header.classList.remove('backdrop-blur-sm', 'bg-indigo-900/90');
+            }
+        });
     </script>
 </body>
 </html>
